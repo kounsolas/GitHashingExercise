@@ -2,6 +2,6 @@
 
 # Takes the last 4 digits of AEM, hashes them with SHA-256, and writes the result to output.txt
 
-my_number="0345"
+my_number=$1
 hash=$(echo -n "$my_number" | sha256sum | cut -d ' ' -f 1)
 echo "$hash" > hash_output.txt
